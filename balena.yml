@@ -1,0 +1,24 @@
+name: "Unifi"
+type: "sw.application"
+version: 2022.7.16
+description: "Unifi Controller allows you to setup your Ubiquiti Unifi devices"
+post-provisioning: >-
+  ## Usage instructions
+  
+  Once your device joins the fleet you'll need to allow some time for it to download the application and unpack it.
+  
+  Then use Local IP address to connect on port 8443 and HTTPS to start the setup.
+assets:
+  repository:
+    type: "blob.asset"
+    data:
+      url: "https://github.com/BluenationStudio/balena-unifi"
+  logo:
+    type: "blob.asset"
+    data:
+      url: "https://raw.githubusercontent.com/BluenationStudio/balena-unifi/master/ui.webp"
+data:
+  defaultDeviceType: "raspberrypi3-64"
+  supportedDeviceTypes:
+    - "raspberrypi3-64"
+    - "raspberrypi4-64"
